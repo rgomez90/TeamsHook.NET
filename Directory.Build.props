@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <Product>TeamsHook.NET</Product>
+    <Description>.NET Client for sending messages to Microsoft Teams via Webhooks</Description>
+    <Company>Rafael Gómez</Company>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+</Project>

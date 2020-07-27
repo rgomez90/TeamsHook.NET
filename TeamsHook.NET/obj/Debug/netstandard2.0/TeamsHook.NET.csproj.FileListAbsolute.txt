@@ -1,0 +1,9 @@
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\bin\Debug\netstandard2.0\TeamsHook.NET.deps.json
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\bin\Debug\netstandard2.0\TeamsHook.NET.dll
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\bin\Debug\netstandard2.0\TeamsHook.NET.pdb
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\obj\Debug\netstandard2.0\TeamsHook.NET.csprojAssemblyReference.cache
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\obj\Debug\netstandard2.0\TeamsHook.NET.AssemblyInfoInputs.cache
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\obj\Debug\netstandard2.0\TeamsHook.NET.AssemblyInfo.cs
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\obj\Debug\netstandard2.0\TeamsHook.NET.dll
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\obj\Debug\netstandard2.0\TeamsHook.NET.pdb
+D:\Repositories\TeamsHook.NET\TeamsHook.NET\obj\Debug\netstandard2.0\TeamsHook.NET.csproj.CoreCompileInputs.cache
