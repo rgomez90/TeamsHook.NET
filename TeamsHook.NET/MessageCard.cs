@@ -9,7 +9,7 @@ namespace TeamsHook.NET
         {
         }
 
-        public Guid CorrelationId { get; set; }
+        public Guid CorrelationId { get; set; } 
         public string[] ExpectedActors { get; set; }
         public bool HideOriginalBody { get; set; }
         public string Originator { get; set; }

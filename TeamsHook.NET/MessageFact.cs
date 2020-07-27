@@ -8,7 +8,7 @@
             Value = value;
         }
 
-        public string Name { get; }
-        public string Value { get; }
+        public string Name { get; private set; }
+        public string Value { get; private set; }
     }
 }
