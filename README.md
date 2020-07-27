@@ -1,0 +1,1 @@
+![.NET Core](https://github.com/rgomez90/TeamsHook.NET/workflows/.NET%20Core/badge.svg)

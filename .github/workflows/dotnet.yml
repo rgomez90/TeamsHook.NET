@@ -20,6 +20,13 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      env:
+        VERSION: 0.0.1.0-${{GITHUB_RUN_ID}}
+      run: dotnet build --configuration Release --no-restore /property:Version=$VERSION
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Publish Nuget
+      uses: brandedoutcast/publish-nuget@v2.5.5
+      with:
+          PROJECT_FILE_PATH: TeamsHook.NET/TeamsHook.NET.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
