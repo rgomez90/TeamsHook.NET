@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -16,6 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TeamsHook.NET\TeamsHook.NET.csproj" />
-  </ItemGroup>
+  </ItemGroup> 
 
 </Project>
