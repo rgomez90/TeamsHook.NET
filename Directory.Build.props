@@ -8,7 +8,7 @@
     <RepositoryUrl>https://github.com/rgomez90/TeamsHook.NET</RepositoryUrl>
     <PackageTags>teams, microsoft, webhook, client</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.comrgomez90/TeamsHook.NET</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/rgomez90/TeamsHook.NET</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
