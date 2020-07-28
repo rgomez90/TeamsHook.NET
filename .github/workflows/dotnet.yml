@@ -26,6 +26,4 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Publish Nuget
-      run: dotnet nuget push TeamsHook.NET/TeamsHook.NET/bin/Release/TeamsHook.NET.$VERSION-$GITHUB_RUN_NUMBER.nupkg -k $NUGET_KEY -s https://api.nuget.org/v3/index.json
-      with:
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      run: dotnet nuget push TeamsHook.NET/TeamsHook.NET/bin/Release/TeamsHook.NET.$VERSION-$GITHUB_RUN_NUMBER.nupkg -k $secrets.NUGET_API_KEY -s https://api.nuget.org/v3/index.json
