@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     env:
-      VERSION: 0.0.1.0-${{GITHUB_RUN_NUMBER}}
+      VERSION: 0.0.1.0
 
     runs-on: ubuntu-latest
 
@@ -22,10 +22,10 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore /property:Version=$VERSION
+      run: dotnet build --configuration Release --no-restore /property:Version=$VERSION-$GITHUB_RUN_NUMBER
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Publish Nuget
-      run: dotnet nuget push TeamsHook.NET/TeamsHook.NET/bin/Release/TeamsHook.NET.$VERSION.nupkg -k $NUGET_KEY -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push TeamsHook.NET/TeamsHook.NET/bin/Release/TeamsHook.NET.$VERSION-$GITHUB_RUN_NUMBER.nupkg -k $NUGET_KEY -s https://api.nuget.org/v3/index.json
       with:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
