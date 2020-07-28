@@ -22,7 +22,7 @@ jobs:
     - name: Build
       env:
         VERSION: 0.0.1.0
-      run: dotnet build --configuration Release --no-restore /property:Version=$VERSION-$GITHUB_RUN_ID
+      run: dotnet build --configuration Release --no-restore /property:Version=$VERSION-$GITHUB_RUN_NUMBER
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Publish Nuget
