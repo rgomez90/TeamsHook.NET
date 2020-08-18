@@ -1,1 +1,1 @@
-![.NET Core](https://github.com/rgomez90/TeamsHook.NET/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/rgomez90/TeamsHook.NET/workflows/.NET%20Core/badge.svg) [![Nuget](https://img.shields.io/nuget/dt/TeamsHook.NET?label=NuGet&logo=nuget)](https://www.nuget.org/packages/TeamsHook.NET/)
