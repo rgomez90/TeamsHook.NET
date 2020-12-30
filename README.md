@@ -34,7 +34,7 @@ var card = new MessageCard()
 Post your message
 
 ```csharp
-await client.PostAsync(card, "https://your-teams-webhook)
+await client.PostAsync("https://your-teams-webhook", card)
 ```
 
 ## Contributing
