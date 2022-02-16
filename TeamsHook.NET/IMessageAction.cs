@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using Newtonsoft.Json;
 
 namespace TeamsHook.NET
 {
@@ -10,8 +9,6 @@ namespace TeamsHook.NET
             Type = type;
         }
 
-        [JsonPropertyName("@type")]
-        [JsonProperty("@type")]
         public MessageActionType Type { get; private set; }
     }
 }

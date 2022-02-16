@@ -53,7 +53,7 @@ namespace TeamsHook.NET.Tests
                     {
                         Title = "SectionTitle",
                         Text = "SectionText",
-                        ActivityText = "11 Vorgänge gefunden",
+                        ActivityText = "11 Vorgï¿½nge gefunden",
                         ActivitySubtitle = DateTime.Now.ToString("G"),
                         ActivityTitle = "Offene FE",
                         Facts = new List<MessageFact>()
@@ -67,7 +67,7 @@ namespace TeamsHook.NET.Tests
                     {
                         Title = "SectionTitle",
                         Text = "<table bordercolor='black' border= '2'><thead><tr style = 'background-color : Teal; color: White'><th>Task</th><th>Status</th><th>Start Time</th><th>End Time</th></tr></thead></thead><tbody ><tr><td>xxx</td><td>yyy</td><td>14:25</td></tr><tr><td>xxx</td><td>yyy</td><td>15:25</td><td>16:25</td></tr></tbody></table>",
-                        ActivityText = "11 Vorgänge gefunden",
+                        ActivityText = "11 Vorgï¿½nge gefunden",
                         ActivitySubtitle = DateTime.Now.ToString("G"),
                         ActivityTitle = "Offene FE",
                         Facts = new List<MessageFact>()
@@ -90,7 +90,7 @@ namespace TeamsHook.NET.Tests
                     }
                 }
             };
-            var json = JsonSerializer.Serialize(card, TeamsHookSystemTextSerializationOptions.Instance);
+            var json = JsonSerializer.Serialize(card, TeamsHookJsonSettings.Default());
             string expectedJson = "";
             //Assert.True(json == expectedJson);
         }
@@ -155,7 +155,7 @@ namespace TeamsHook.NET.Tests
                     }
                 }
             };
-            var json = JsonSerializer.Serialize(card, TeamsHookSystemTextSerializationOptions.Instance);
+            var json = JsonSerializer.Serialize(card, TeamsHookJsonSettings.Default());
             string expectedJson = "";
             //Assert.True(json == expectedJson);
         }

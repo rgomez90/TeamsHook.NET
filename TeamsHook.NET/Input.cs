@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-
-namespace TeamsHook.NET
+﻿namespace TeamsHook.NET
 {
     public abstract class Input
     {
@@ -11,11 +8,13 @@ namespace TeamsHook.NET
         }
 
         public string Id { get; set; }
+
         public bool IsRequired { get; set; }
+
         public string Title { get; set; }
-        [JsonPropertyName("@type")]
-        [JsonProperty("@type")]
-        public MessageInputType Type { get; }
+
+        public MessageInputType Type { get; private set; }
+
         public string Value { get; set; }
     }
 }

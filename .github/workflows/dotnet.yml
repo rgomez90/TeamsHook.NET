@@ -9,22 +9,41 @@ on:
 jobs:
   build:
     env:
-      VERSION: 0.1.0
-      NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}
-
-    runs-on: ubuntu-latest
+      NUGET_API_KEY: 
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.301
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore /property:Version=$VERSION.$GITHUB_RUN_NUMBER
+      uses: actions/setup-dotnet@v1   
+      
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-    - name: Publish Nuget
-      run: dotnet nuget push TeamsHook.NET/bin/Release/TeamsHook.NET.$VERSION.$GITHUB_RUN_NUMBER.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+
+    - name: Publish Nuget on version change
+      uses: rohith/publish-nuget@v2
+      with:
+        # Filepath of the project to be packaged, relative to root of repository
+        PROJECT_FILE_PATH: TeamsHook.NET/TeamsHook.NET.csproj
+                
+        # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
+        # VERSION_FILE_PATH: Directory.Build.props
+
+        # Regex pattern to extract version info in a capturing group
+        VERSION_REGEX: ^\s*<Version>(.*)<\/Version>\s*$             
+
+        # Flag to toggle git tagging, enabled by default
+        TAG_COMMIT: true
+
+        # Format of the git tag, [*] gets replaced with actual version
+        TAG_FORMAT: v*
+
+        # API key to authenticate with NuGet server
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+        # NuGet server uri hosting the packages, defaults to https://api.nuget.org
+        # NUGET_SOURCE: https://api.nuget.org
+
+        # Flag to toggle pushing symbols along with nuget package to the server, disabled by default
+        # INCLUDE_SYMBOLS: false

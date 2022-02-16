@@ -8,7 +8,7 @@ namespace TeamsHook.NET
         {
         }
 
-        public IList<Choice> Choices { get; set; }
+        public IList<Choice> Choices { get; set; } = new List<Choice>();
         public bool IsMultiSelect { get; set; }
         public string Style { get; set; }
     }

@@ -9,12 +9,12 @@ namespace TeamsHook.NET
         {
         }
 
-        public Guid CorrelationId { get; set; } 
+        public Guid CorrelationId { get; set; }
         public string[] ExpectedActors { get; set; }
         public bool HideOriginalBody { get; set; }
         public string Originator { get; set; }
-        public IList<MessageAction> PotentialAction { get; set; }
-        public IList<Section> Sections { get; set; }
+        public IList<MessageAction> PotentialAction { get; set; } = new List<MessageAction>();
+        public IList<Section> Sections { get; set; } = new List<Section>();
         public string Summary { get; set; }
         public string Text { get; set; }
         public string ThemeColor { get; set; }

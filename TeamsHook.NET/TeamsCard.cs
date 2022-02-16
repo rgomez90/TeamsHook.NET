@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using Newtonsoft.Json;
 
 namespace TeamsHook.NET
 {
@@ -11,12 +10,10 @@ namespace TeamsHook.NET
             Context = "http://schema.org/extensions";
         }
 
-        [JsonPropertyName("@type")]
-        [JsonProperty("@type")]
+        [JsonPropertyName("type")]
         public CardType CardType { get; private set; }
 
-        [JsonPropertyName("@context")]
-        [JsonProperty("@context")]
+        [JsonPropertyName("context")]
         public string Context { get; private set; }
     }
 }
