@@ -1,4 +1,4 @@
-name: .NET Core
+name: Build and publish on version change
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  publish:
     env:
       NUGET_API_KEY: 
     runs-on: windows-latest
@@ -16,10 +16,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1   
-      
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      uses: actions/setup-dotnet@v1    
 
     - name: Publish Nuget on version change
       uses: rohith/publish-nuget@v2
@@ -28,10 +25,10 @@ jobs:
         PROJECT_FILE_PATH: TeamsHook.NET/TeamsHook.NET.csproj
                 
         # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
-        # VERSION_FILE_PATH: Directory.Build.props
+        VERSION_FILE_PATH: Directory.Build.props
 
         # Regex pattern to extract version info in a capturing group
-        VERSION_REGEX: ^\s*<Version>(.*)<\/Version>\s*$             
+        VERSION_REGEX: <Version>(.*)<\/Version>
 
         # Flag to toggle git tagging, enabled by default
         TAG_COMMIT: true
