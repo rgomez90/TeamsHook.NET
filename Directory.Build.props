@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <Version>0.2.0-pre2</Version>
+    <Version>0.2.0-pre3</Version>
     <Product>TeamsHook.NET</Product>
     <Description>.NET Client for sending messages to Microsoft Teams via Webhooks</Description>
     <Company>Rafael Gómez</Company>
