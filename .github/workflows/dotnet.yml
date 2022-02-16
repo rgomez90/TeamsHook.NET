@@ -1,4 +1,4 @@
-name: .NET Core
+name: Build and publish on version change
 
 on:
   push:
@@ -16,10 +16,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1   
-      
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      uses: actions/setup-dotnet@v1    
 
     - name: Publish Nuget on version change
       uses: rohith/publish-nuget@v2
