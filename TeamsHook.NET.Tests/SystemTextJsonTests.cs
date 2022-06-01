@@ -98,7 +98,7 @@ namespace TeamsHook.NET.Tests
         [Fact]
         public async Task JsonTestMessageCardClient()
         {
-            const string UriWebhook = @"https://outlook.office.com/webhook/d3470767-e202-4f22-8251-a42d92916355@4cccefa5-026f-4183-ba9d-ca1ff6e6bb59/IncomingWebhook/ba9e479c10b540a2bdffe7a1493879d3/e2d090c3-7509-4c54-a95f-678a5af6d85b";
+            const string UriWebhook = @"https://hengesbachgmbh.webhook.office.com/webhookb2/f4d42301-3481-42e4-8b9f-cc7616ccb768@4cccefa5-026f-4183-ba9d-ca1ff6e6bb59/IncomingWebhook/fe635dbed4b642a4aeb57eb7221a7ca1/e2d090c3-7509-4c54-a95f-678a5af6d85b";
 
             var opt = new JsonSerializerOptions()
             {
@@ -127,10 +127,11 @@ namespace TeamsHook.NET.Tests
                     }
                 }
             };
-            var json = JsonSerializer.Serialize(card, opt);
-            using var client = new HttpClient();
-            var response = await client.PostAsync(UriWebhook, new StringContent(json, Encoding.UTF8, "application/json"));
-            var content = await response.Content.ReadAsStringAsync();
+
+            var client = new TeamsHookClient();
+            var response = await client.PostAsync(UriWebhook, card);
+            var content = await response.Content.ReadAsStringAsync(); 
+            Console.WriteLine(content);
         }
 
         [Fact]

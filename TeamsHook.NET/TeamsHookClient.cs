@@ -18,7 +18,7 @@ namespace TeamsHook.NET
 
         public Task<HttpResponseMessage> PostAsync(string webhookUrl, TeamsCard card)
         {
-            var payload = JsonSerializer.Serialize(card, _jsonSettings);
+            var payload = JsonSerializer.Serialize(card, card.GetType(), _jsonSettings);
             return _client.PostAsync(webhookUrl, new StringContent(payload, Encoding.UTF8, "application/json"));
         }
     }
