@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="System.Text.Json" Version="7.0.0-preview.4.22229.4" />
+    <PackageReference Include="System.Text.Json" Version="7.0.0-preview.7.22375.6" />
   </ItemGroup>
 
   <ItemGroup>
